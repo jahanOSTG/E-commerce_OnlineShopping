@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="sharee.css">
+    <link rel="stylesheet" href="function.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
+</head>
+<body>
+    <div class="product-card">
+        <h1>Original Dresses</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+        <div class="product-pic">
+            <div class="product-color">
+                <span class="white" data-color="#f0f0f0" data-pic="url(../image/sharee1.png)"></span>
+                <span class="purple" data-color="#6F1E51" data-pic="url(../image/sharee3.jpeg)"></span>
+                <span class="yellow" data-color="#FFC312" data-pic="url(../image/sharee4.webp)"></span>
+                <span class="blue" data-color="#5758BB" data-pic="url(../image/Saree5-13.jpg)"></span>
+              
+            </div>
+        </div>
+        
+        <div class="product-info">
+            <div class="product-price">$90</div>
+            <a href="#" class="product-button">Add to cart</a>
+        </div>
+    </div>
+    <script>
+        $(".product-color span").click(function(){
+            $("product-color span").removeClass("active");
+            $(this).addClass("active");
+            $("body").css("background",$(this).attr("data-color"));
+            $(".product-price").css("color",$(this).attr("data-color"));
+            $(".product-button").css("color",$(this).attr("data-color"));
+            $(".product-pic").css("background-image",$(this).attr("data-pic"));
+
+
+        });
+    </script>
+
+</body>
+</html>
