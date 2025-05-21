@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #FFEFBA, #FFFFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.6s ease-in-out;
+}
+
+.product-card {
+    width: 520px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.product-card p {
+    font-size: 12px;
+    color: #777;
+}
+
+.product-pic {
+    width: 100%; /* Adjust width to fit within the card */
+    height: 250px; /* Set a fixed height */
+    border-radius: 15px;
+    background-image: url(image/1.webp);
+    background-size: contain; /* Ensures the entire image fits */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto; /* Centers the image inside the card */
+}
+
+
+.product-color {
+    position: absolute;
+    bottom: 10px; /* Places it inside the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Adds a semi-transparent background */
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+.product-color span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.product-color span:hover {
+    transform: scale(1.2);
+}
+
+
+.product-color .active:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 2px solid #555;
+    position: absolute;
+    border-radius: 50%;
+    left: -30%;
+    top: -30%;
+}
+
+.blue { background: #000957; }
+.green { background: #3E7B27; }
+.brown { background: #854836; }
+.darkbrown { background: #443627; }
+.white { background: #F7F7F7; border: 1px solid #ddd; }
+
+.product-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-price {
+    color: #57595b;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.product-button {
+    background: #b91111;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.product-button:hover {
+    background: #7d899b;
+    transform: scale(1.08);
+}

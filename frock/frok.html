@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
+</head>
+<body>
+    <div class="product-card">
+        <h1>Original Dresses</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+        <div class="product-pic">
+            <div class="product-color">
+                <span class="red active" data-color="#A31D1D" data-pic="url(../image/1.webp)"></span>
+                <span class="green" data-color="#3E7B27" data-pic="url(../image/2.webp)"></span>
+                <span class="blue" data-color="#000957" data-pic="url(../image/3.webp)"></span>
+                <span class="brown" data-color="#854836" data-pic="url(../image/4.jpg)"></span>
+                <span class="white" data-color="#F7F7F7" data-pic="url(../image/5.jpg)"></span>
+                <span class="darkbrown" data-color="#443627" data-pic="url(../image/7.jpg)"></span>
+            </div>
+        </div>
+        
+        <div class="product-info">
+            <div class="product-price">$90</div>
+            <a href="#" class="product-button">Add to cart</a>
+        </div>
+    </div>
+    <script>
+        $(".product-color span").click(function(){
+            $("product-color span").removeClass("active");
+            $(this).addClass("active");
+            $("body").css("background",$(this).attr("data-color"));
+            $(".product-price").css("color",$(this).attr("data-color"));
+            $(".product-button").css("color",$(this).attr("data-color"));
+            $(".product-pic").css("background-image",$(this).attr("data-pic"));
+
+
+        });
+    </script>
+
+</body>
+</html>
